@@ -9,16 +9,16 @@ recognition.start()
 recognition.addEventListener('result', onSpeak)
 
 function onSpeak(e){
-    chute = e.results[0][0].transcript
+     chute = e.results[0][0].transcript
     exibeChuteTela(chute)
     verificaSeOChutePossuiUmValorValido(chute)
 }
 
 function exibeChuteTela(chute){
     elementoChute.innerHTML = `
-        <div>Você disse: </div>
+        <div>Você disse</div>
         <span class="box">${chute}</span>
-    `
+     `
 }
 
 recognition.addEventListener('end', () => recognition.start())

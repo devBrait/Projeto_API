@@ -1,12 +1,12 @@
 function verificaSeOChutePossuiUmValorValido(chute){
-    const numero = +chute
+    const numero = parseInt(chute, 10);
 
     if(VerificaValor(numero)){
         elementoChute.innerHTML += '<div>Valor inválido</div>'
         return
     }
     if(numeroForMaiorOuMenorQueOPermitido(numero)){
-        elementoChute.innerHTML += "valor inválido: número precisa ser entre ${menorValor} e ${maiorValor}"
+        elementoChute.innerHTML += `<div>valor inválido: número precisa ser entre ${menorValor} e ${maiorValor}</div>`
         return
     }
     if(numero == numeroSorteado){
@@ -15,7 +15,7 @@ function verificaSeOChutePossuiUmValorValido(chute){
                                     <h3>O número era ${numeroSorteado}, parabéns!</h3>
                                     <button id="btn-jogar" class="btn-jogar">Jogar novamente</button>
         `
-    }else if(numeroSorteado == "Game Over"){
+    }else if(numeroSorteado === "Game Over"){
         document.body.innerHTML = `<h2>Fim de Jogo!</h2>
         <h3>Obrigado por jogar!</h3>
         <button id="btn-jogar" class="btn-jogar">Jogar novamente</button>

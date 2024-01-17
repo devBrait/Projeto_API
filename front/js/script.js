@@ -1,8 +1,6 @@
 const menorValor = 1
-const maiorValor = 100
+const maiorValor = 1000
 const numeroSorteado = gerarNumero()
-const elementoMenorValor = document.getElementById('menor-valor')
-const elementoMaiorValor = document.getElementById('maior-valor')
 
 
 function gerarNumero(){
@@ -11,5 +9,7 @@ function gerarNumero(){
 
 console.log(numeroSorteado)
 
+const elementoMenorValor = document.getElementById('menor-valor')
 elementoMenorValor.innerHTML = menorValor
+const elementoMaiorValor = document.getElementById('maior-valor')
 elementoMaiorValor.innerHTML = maiorValor
