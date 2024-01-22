@@ -12,19 +12,23 @@
 
     <div id="particles-js"></div>
         <div class="container-forms">
-            <form action="index.html" class="mx-auto form-login">
-                <h4 class="txt-center">Login</h4>
+            <form action="index.html" class="mx-auto form-cadastro">
+                <h4 class="txt-center">Cadastro</h4>
                     <div class="mb-3 mt-5">
                         <label for="exampleInputName1" class="form-label">Nome:</label>
                             <input type="name" class="form-control" id="exampleInputName1" aria-describedby="name" required="true">
                                 </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Email: </label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                  </div>
                                     <div class="mb-3">
                                         <label for="exampleInputPassword1" class="form-label">Senha:</label>
                                         <input type="password" class="form-control" id="exampleInputPassword1" required="true">
                                     <div id="emailHelp" class="form-text mt-4">Esqueceu sua senha?</div>
                                 </div>
                     <button type="submit" class="btn btn-primary mt-5">Entrar</button>
-                    <div id="CadastroHelp" class="form-text mt-3" onclick="redirecionarParaCadastro()" onmouseover="mudarCursorLogin()">Não tem uma conta?</div>
+                    <div id="LoginHelp" class="form-text mt-3" onclick="redirecionarParaLogin()" onmouseover="mudarCursor()">Já tem uma conta?</div>
             </form>
         </div>
     <footer class="footer">
