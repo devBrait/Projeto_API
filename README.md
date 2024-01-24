@@ -16,11 +16,30 @@ O projeto apresenta um CRUD básico na API, com foco na melhoria do front-end po
 - Entity Framework: Utilizado para mapeamento objeto-relacional e interação com o banco de dados.
 - SQL (Banco de Dados): Banco de dados utilizado para armazenar e gerenciar os dados.
 
+### Execução
+
+- Primeiro acesse o site oficial da Microsoft e instale o SDK.Net: https://dotnet.microsoft.com/pt-br/download/dotnet-framework
+  - Verificar versão instalada:
+  
+         dotnet --version
+  
+  - Rodar Projeto:
+
+        dotnet run
+  #### Lembre de abrir o terminal integrado com a solução Projeto.API.
+  
 ### Front-end
 - HTML, CSS: Fundamentais para a estrutura e estilo da aplicação web.
 - Bootstrap: Framework de design que agiliza o desenvolvimento.
 - JavaScript: Utilizado para adicionar dinamismo e interatividade ao front-end e realiza a chamada da API de reconhecimento de voz(Web Speech) e a API localizada no back-end.
 - Biblioteca Particle.js: Utilizada para criar efeitos de partículas animadas no fundo da tela.
+
+### Execução
+
+- Para rodar o front-end foi utilizada a extensão live server do VS CODE, basta instalar e clicar no botão "Go Live" que automticamente ele será executado.
+
+  ![image](https://github.com/devBrait/Projeto_Responsivo_Carros/assets/121905548/435102b3-f75e-4f6e-9855-0a5ade0b920b)
+
 
 <h2>Contribuições</h2>
 Contribuições são bem-vindas! Sinta-se à vontade para propor melhorias ou corrigir possíveis problemas identificados. 
