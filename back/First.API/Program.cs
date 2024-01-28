@@ -1,6 +1,6 @@
-using First.API.Business.Services;
-using First.API.Data.Contexts;
-using First.API.Data.Repositories;
+using First.Business.Services;
+using First.Data.Contexts;
+using First.Data.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 
