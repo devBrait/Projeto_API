@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using First.Business.Services;
+using First.Core.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -28,7 +29,7 @@ namespace First.API.Controllers
 
             if (usuarios == null)
             {
-                return NotFound(); // ou outro código de status apropriado
+                return NotFound();
             }
 
             return Ok(new
@@ -37,5 +38,21 @@ namespace First.API.Controllers
                 data = usuarios
             });
         }
+
+        [AllowAnonymous]
+        [HttpPost("criar")]
+        public async Task<IActionResult> CriarUsuarioAsync([FromBody]Usuario novoUsuario)
+        {
+            try
+            {
+                var usuarioCriado = await _usuarioService.CreateUsuarioAsync(novoUsuario);
+                return Ok(usuarioCriado);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
     }
 }

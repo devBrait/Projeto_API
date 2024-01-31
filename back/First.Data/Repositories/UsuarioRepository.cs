@@ -19,5 +19,14 @@ namespace First.Data.Repositories
             var usuarios = await _AppdbContext.Usuarios.ToListAsync();
             return usuarios;
     }
+
+    public async Task<Usuario> CreateUsuarioAsync(Usuario usuario)
+    {
+       var usuarioCriado = _AppdbContext.Usuarios.Add(usuario);
+
+        await _AppdbContext.SaveChangesAsync();
+
+        return usuarioCriado.Entity;
+    }
     }
 }

@@ -8,5 +8,7 @@ namespace First.Core.Interfaces
     public interface IUsuarioRepository
     {
         Task<List<Usuario>> GetUsuarioAsync();
+
+        Task<Usuario> CreateUsuarioAsync(Usuario usuario);
     }
 }

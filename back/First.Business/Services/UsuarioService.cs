@@ -20,5 +20,10 @@ namespace First.Business.Services
     {   
             return await _usuarioRepository.GetUsuarioAsync();
     }
+
+    public async Task<Usuario> CreateUsuarioAsync(Usuario usuario)
+    {
+        return await _usuarioRepository.CreateUsuarioAsync(usuario);
+    }
     }
 }
