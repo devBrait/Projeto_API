@@ -1,6 +1,6 @@
 using First.Core.Interfaces;
 using First.Core.Models;
-using First.Data.Contexts;
+using First.Data.Context;
 using Microsoft.EntityFrameworkCore;
 
 namespace First.Data.Repositories

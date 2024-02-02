@@ -3,7 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using First.Core.Models;
 
-namespace First.Data.Contexts
+namespace First.Data.Context
 {
     public class AppDbContext : DbContext
     {
