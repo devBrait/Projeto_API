@@ -94,4 +94,15 @@ h3{
     left: 0;
     z-index: -1;
   }
+.navbar {
+    background-color: transparent !important; 
+    color: #fff;
+  }
+  
+  .navbar-nav .nav-link {
+    color: #fff; 
+  }
+  .navbar-brand i {
+    color: #fff; 
+  }
   

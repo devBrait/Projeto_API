@@ -2,10 +2,16 @@ const menorValor = 1
 const maiorValor = 1000
 const numeroSorteado = gerarNumero()
 
+
 function redirecionarParaLogin() {
     // Redirecionar para a página de login
     window.location.href = 'login.html';
 }
+
+function redirecionarParaUser() {
+    window.location.href = 'user.html';
+}
+
 
 function mudarCursor() {
     // Mudar o cursor do mouse para 'pointer'
