@@ -21,7 +21,6 @@ namespace First.API.Controllers
             _usuarioService = usuarioService;
         }
 
-        [AllowAnonymous]
         [HttpGet]
         public async Task<IActionResult> getUsuariosAsync()
         {   
@@ -39,14 +38,27 @@ namespace First.API.Controllers
             });
         }
 
-        [AllowAnonymous]
-        [HttpPost("criar")]
+        [HttpPost]
         public async Task<IActionResult> CriarUsuarioAsync([FromBody]Usuario novoUsuario)
         {
             try
             {
                 var usuarioCriado = await _usuarioService.CreateUsuarioAsync(novoUsuario);
                 return Ok(usuarioCriado);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+        [HttpDelete("{cod_usuario}")]
+        public async Task<IActionResult> DeleteUsuarioAsync(int cod_usuario)
+        {
+            try
+            {
+                await _usuarioService.DeleteUsuarioAsync(cod_usuario);
+                return Ok(true);
             }
             catch (Exception ex)
             {

@@ -3326,11 +3326,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lorim\\OneDrive\\Documentos\\PROJETOS\\WEB\\Projeto_API\\back\\First.API\\First.API.csproj",
+      "projectUniqueName": "C:\\Users\\lorim\\OneDrive\\Documentos\\PROJETOS\\WEB\\Projeto_API\\back\\First.Api\\First.API.csproj",
       "projectName": "First.API",
-      "projectPath": "C:\\Users\\lorim\\OneDrive\\Documentos\\PROJETOS\\WEB\\Projeto_API\\back\\First.API\\First.API.csproj",
+      "projectPath": "C:\\Users\\lorim\\OneDrive\\Documentos\\PROJETOS\\WEB\\Projeto_API\\back\\First.Api\\First.API.csproj",
       "packagesPath": "C:\\Users\\lorim\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lorim\\OneDrive\\Documentos\\PROJETOS\\WEB\\Projeto_API\\back\\First.API\\obj\\",
+      "outputPath": "C:\\Users\\lorim\\OneDrive\\Documentos\\PROJETOS\\WEB\\Projeto_API\\back\\First.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\lorim\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3387,7 +3387,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.423\\RuntimeIdentifierGraph.json"
       }
     }
   }

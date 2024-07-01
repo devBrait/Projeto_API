@@ -23,10 +23,12 @@ namespace First.Data.Repositories
     public async Task<Usuario> CreateUsuarioAsync(Usuario usuario)
     {
        var usuarioCriado = _AppdbContext.Usuarios.Add(usuario);
+       
 
         await _AppdbContext.SaveChangesAsync();
 
         return usuarioCriado.Entity;
     }
+
     }
 }
