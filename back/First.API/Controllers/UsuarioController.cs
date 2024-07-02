@@ -1,13 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 using First.Business.Services;
 using First.Core.Models;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 
 namespace First.API.Controllers
 {
@@ -45,6 +38,20 @@ namespace First.API.Controllers
             {
                 var usuarioCriado = await _usuarioService.CreateUsuarioAsync(novoUsuario);
                 return Ok(usuarioCriado);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> UpdateUsuarioAsync([FromBody]Usuario usuario)
+        {
+            try
+            {
+                var usuarioAlterado = await _usuarioService.UpdateUsuarioAsync(usuario);
+                return Ok(usuarioAlterado);
             }
             catch (Exception ex)
             {
