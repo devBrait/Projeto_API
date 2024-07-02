@@ -1,11 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using First.Core.Interfaces;
 using First.Core.Models;
 using First.Data.Context;
-using First.Data.Repositories;
 
 namespace First.Business.Services
 {
@@ -28,6 +23,23 @@ namespace First.Business.Services
     public async Task<Usuario> CreateUsuarioAsync(Usuario usuario)
     {
         return await _usuarioRepository.CreateUsuarioAsync(usuario);
+    }
+
+     public async Task<Usuario> UpdateUsuarioAsync(Usuario usuario)
+    {
+
+        var usuarioAlterado = new Usuario
+        { 
+            id = usuario.id,
+            nome = usuario.nome,
+            email = usuario.email,
+            telefone = usuario.telefone,
+            senha = usuario.senha
+        };
+
+        AppDbContext.Update(usuarioAlterado);
+        await AppDbContext.SaveChangesAsync();
+        return usuarioAlterado;
     }
 
     public async Task<bool> DeleteUsuarioAsync(int cod_usuario)
