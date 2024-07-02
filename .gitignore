@@ -24,6 +24,8 @@ packages/
 # Arquivos de cache de build do .NET Core
 project.lock.json
 project.fragment.lock.json
+*.dll
+*.pdb
 *.cache
 /.dotnet
 
