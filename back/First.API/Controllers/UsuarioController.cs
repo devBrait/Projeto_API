@@ -37,11 +37,11 @@ namespace First.API.Controllers
             try
             {
                 var usuarioCriado = await _usuarioService.CreateUsuarioAsync(novoUsuario);
-                return Ok(usuarioCriado);
+                return Ok(new { success = true, data = usuarioCriado });
             }
             catch (Exception ex)
             {
-                return StatusCode(500, ex.Message);
+                return StatusCode(500, new { success = false, message = ex.Message });
             }
         }
 
